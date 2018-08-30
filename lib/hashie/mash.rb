@@ -276,7 +276,7 @@ module Hashie
       when '_'.freeze
         underbang_reader(name)
       else
-        self[method_name]
+        super
       end
     end
 
