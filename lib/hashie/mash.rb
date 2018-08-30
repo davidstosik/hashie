@@ -249,13 +249,7 @@ module Hashie
     end
 
     def respond_to_missing?(method_name, *args)
-      return true if key?(method_name)
-      suffix = method_suffix(method_name)
-      if suffix
-        true
-      else
-        super
-      end
+      true
     end
 
     def prefix_method?(method_name)
